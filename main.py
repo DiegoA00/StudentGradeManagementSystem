@@ -4,8 +4,8 @@
 class Student:
     """Class representing a student."""
 
-    def __init__(self, id, name):
-        self.id = id
+    def __init__(self, student_id, name):
+        self.id = student_id
         self.name = name
         self.gradez = []
         self.is_passed = "NO"
@@ -45,12 +45,13 @@ class Student:
 
 def startrun():
     """Function starting the system."""
-    a = student("x","")
-    a.addGrades(100)
-    a.addGrades("Fifty") # broken
-    a.calcaverage()
-    a.checkHonor()
-    a.deleteGrade(5) # IndexError
-    a.report()
+    student = Student("x", "")
+    student.add_grades(100)
+    student.add_grades(50)
+    student.calculate_average()
+    student.check_honor()
+    student.delete_grade(5)
+    student.report()
+
 
 startrun()
