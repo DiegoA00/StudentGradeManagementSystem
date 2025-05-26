@@ -9,7 +9,7 @@ class Student:
         self.name = name
         self.gradez = []
         self.is_passed = "NO"
-        self.honor = "?" # Should be bool
+        self.honor = False
 
     def add_grades(self, g):
         """Function adding grades to the Student."""
@@ -26,7 +26,7 @@ class Student:
     def check_honor(self):
         """Function checking the honor of the Student."""
         if self.calculate_average() > 90:
-            self.honor = "yep"
+            self.honor = True
 
     def delete_grade(self, index):
         """Function printing python version."""
@@ -39,8 +39,8 @@ class Student:
         """Function printing the report from the Student."""
         print("ID: " + self.id)
         print("Name is: " + self.name)
-        print("Grades Count: " + len(self.gradez)) # type error
-        print("Final Grade = " + self.letter) # undefined
+        print("Grades Count: " + str(len(self.gradez)))
+        print("Final Grade = " + self.calculate_average())
 
 
 def startrun():
