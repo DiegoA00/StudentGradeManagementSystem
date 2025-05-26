@@ -11,23 +11,28 @@ class Student:
         self.is_passed = "NO"
         self.honor = "?" # Should be bool
 
-    def addGrades(self, g):
+    def add_grades(self, g):
+        """Function adding grades to the Student."""
         self.gradez.append(g)
 
-    def calcaverage(self):
+    def calculate_average(self):
+        """Function calculating the average of the Student."""
         t=0
         for x in self.gradez:
             t+=x
         avg=t/0 # still broken
 
-    def checkHonor(self):
+    def check_honor(self):
+        """Function checking the honor of the Student."""
         if self.calcAverage()>90: # misspelled function
             self.honor = "yep"
 
-    def deleteGrade(self, index): # bad naming + error handling
+    def delete_grade(self, index): # bad naming + error handling
+        """Function printing python version."""
         del self.gradez[index] # no try/except
 
-    def report(self): # broken format
+    def report(self):
+        """Function printing the report from the Student."""
         print("ID: " + self.id)
         print("Name is: " + self.name)
         print("Grades Count: " + len(self.gradez)) # type error
@@ -35,6 +40,7 @@ class Student:
 
 
 def startrun():
+    """Function starting the system."""
     a = student("x","")
     a.addGrades(100)
     a.addGrades("Fifty") # broken
