@@ -17,10 +17,11 @@ class Student:
 
     def calculate_average(self):
         """Function calculating the average of the Student."""
-        t=0
+        t = 0
         for x in self.gradez:
-            t+=x
-        avg=t/0 # still broken
+            t += x
+        avg = t / len(self.gradez)
+        return avg
 
     def check_honor(self):
         """Function checking the honor of the Student."""
