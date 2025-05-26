@@ -28,9 +28,12 @@ class Student:
         if self.calculate_average() > 90:
             self.honor = "yep"
 
-    def delete_grade(self, index): # bad naming + error handling
+    def delete_grade(self, index):
         """Function printing python version."""
-        del self.gradez[index] # no try/except
+        try:
+            del self.gradez[index]
+        except IndexError:
+            print("Error: There are no grade in the input index")
 
     def report(self):
         """Function printing the report from the Student."""
