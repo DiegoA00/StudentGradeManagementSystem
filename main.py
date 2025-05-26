@@ -25,7 +25,7 @@ class Student:
 
     def check_honor(self):
         """Function checking the honor of the Student."""
-        if self.calcAverage()>90: # misspelled function
+        if self.calculate_average() > 90:
             self.honor = "yep"
 
     def delete_grade(self, index): # bad naming + error handling
