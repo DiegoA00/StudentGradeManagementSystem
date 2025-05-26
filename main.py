@@ -40,7 +40,7 @@ class Student:
         print("ID: " + self.id)
         print("Name is: " + self.name)
         print("Grades Count: " + str(len(self.gradez)))
-        print("Final Grade = " + self.calculate_average())
+        print("Final Grade = " + str(self.calculate_average()))
 
 
 def startrun():
